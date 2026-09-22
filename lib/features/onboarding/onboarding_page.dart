@@ -1,4 +1,5 @@
 import 'package:finance_app/common/constants/app_colors.dart';
+import 'package:finance_app/common/constants/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingPage extends StatelessWidget {
@@ -7,23 +8,33 @@ class OnboardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          const SizedBox(height: 60.0),
-          Expanded(
-            flex: 2,
-            child: Container(
-              color: AppColors.iceWhite,
-              child: Image.asset('assets/images/icon_main.png'),
+      body: Align(
+        child: Column(
+          children: [
+            const SizedBox(height: 60.0),
+            Expanded(
+              flex: 2,
+              child: Container(
+                color: AppColors.iceWhite,
+                child: Image.asset('assets/images/icon_man.png'),
+              ),
             ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              color: AppColors.white,
+            Text(
+              'Spend Smarter',
+              style: AppTextStyles.mediumText.copyWith(color: AppColors.greenLightTwo)
             ),
-          ),
-        ],
+            Text(
+              'Save More',
+              style: AppTextStyles.mediumText.copyWith(color: AppColors.greenLightTwo)
+            ),
+            ElevatedButton(onPressed: (){}, child: Text('Get Started')),
+            Text(
+              'Already have account? sign in',
+              style: AppTextStyles.smallText.copyWith(color: AppColors.grey)
+            ),
+            const SizedBox(height: 40.0),
+          ],
+        ),
       ),
     );
   }
