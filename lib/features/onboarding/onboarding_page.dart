@@ -29,8 +29,9 @@ class OnboardingPage extends StatelessWidget {
               'Save More',
               style: AppTextStyles.mediumText.copyWith(color: AppColors.greenLightTwo)
             ),
+            const SizedBox(height: 16.0),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              padding: const EdgeInsets.symmetric(horizontal: 30.0),
               child: PrimaryButton(text: 'Get Started',
                 onPressed: (){
                   log('Botão clicado!');
