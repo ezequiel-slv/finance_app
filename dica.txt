@@ -1,0 +1,2 @@
+identação: shift + alt + f
+mostrar terminal: ctrl + j
